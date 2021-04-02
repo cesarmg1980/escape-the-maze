@@ -12,6 +12,7 @@ script = ExtResource( 3 )
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 2 )
+frame = 14
 
 [node name="Camera2D" type="Camera2D" parent="." index="8"]
 [connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]
