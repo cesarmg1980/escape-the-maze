@@ -1,6 +1,6 @@
 extends Area2D
 
-export (int) var speed
+export (int) var speed = 3
 
 var tile_size = 64
 var can_move = true
@@ -28,17 +28,6 @@ func move(dir):
 		1.0 / speed, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$MoveTween.start()
 	return true
-
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _on_MoveTween_tween_completed(object, key):
 	can_move = true
